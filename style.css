@@ -18,10 +18,9 @@ form, input, textarea {
   color:black;
 }
 .card {
-  background-color: #777;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   border: none;
   outline: none;
@@ -31,7 +30,7 @@ form, input, textarea {
 .content {
   padding: 0 18px;
   overflow: hidden;
-  background-color: #f1f1f1;
+ 
 }
 .header-items{
   display: flex;
@@ -136,14 +135,9 @@ border-color: green;
   gap:5px;
 }
 .button{
- 
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 5px 15px;
   background-color: #444;
 }
 .ordered-lists-group{

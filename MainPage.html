@@ -4,11 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Newsletter/Start</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="styleMainPage.css" />
 </head>
 <body>
   <div class="button-container">
-    <button class="button button-animate" onClick="window.open('/newsletterForm.html');">Jetzt zum Newsletter anmelden</button>
+    <button id="myBtn" class="button1 button-animate">Jetzt zum Newsletter anmelden</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="content"> 
+      
+          <div class="header-title">
+            <h4>
+              Jetzt zum Newsletter anmelden und
+              <span>20€ sichern!</span>   
+            </h4> 
+          </div>
+          <form class="form"  id="form" method ="post" name ="form">
+            <div class = "form-input-row">
+              <div class ="form-control">
+                <input class ="form-control-input" id="email" type="text" autocomplete ="off" name="email" placeholder="E-Mail Adresse eingeben"/> 
+                <div id="email_error"></div>
+                <small>Error email</small>
+              </div>
+              <div class ="form-control">
+                <input class ="form-control-input" id ="vorname" type="text"  name ="vorname" autocomplete ="off"  placeholder="Vorname" />
+                <div id="vorname_error"></div>
+                <small>Error vorname</small>
+              </div>
+              <div class ="form-control">
+                <input class ="form-control-input" id="nachname" type="nachname" name ="nachname" autocomplete ="off"  placeholder="Nachname" />
+                <div id="nachname_error"></div>
+                <small>Error nachname</small>
+              </div>
+            </div>
+            <div class="ordered-lists-group">
+              <div class = "radio-group">
+                <div class="group-damen">
+                  <input type="radio" name="gender" id ="radio-gender1">
+                  <label for="age1">FÜR DAMEN</label><br>
+                </div>
+                <div class="group-damen">
+                  <input type="radio" name="gender" id ="radio-gender2">
+                  <label for="age1">FÜR HERREN</label><br>
+                </div>   
+                <button type ="submit" class ="button"> ABSENDEN</button>
+              </div>
+            </div>
+            <div class="ordered-lists-group">
+              <ul class ="ordered-lists">
+                <li>DIE NEUESTEN SCHUHKOLLEKTIONEN</li>
+                <li>PERSÖNLICHE STYLING & LIFESTYLE-TIPPS</li>
+                <li>LIMITIERTE ANGEBOTE</li>
+                <li> GEHEIME RABATT-AKTIONEN </li>
+              </ul>
+            </div>
+            <div class ="text">
+              <input class="radio" id="radio" type="radio">
+                <div class= "text-inhalt">
+                  *Ich stimme zu, dass die MyBudapester.com GmbH meine persönlichen Daten gemäß den Datenschutzbestimmungen zum Zwecke der Werbung<p>verwenden, sowie Erinnerungen über nicht bestellte Waren in meinem Warenkorb per E-Mail an mich senden darf. Diese E-Mails können an von mir </p> erworbene oder angesehene Artikel angepasst sein. Ich kann diese Einwilligung jederzeit wie hier beschrieben widerrufen.
+                  <p>* Der Gutschein kann ab einem Mindestbestellwert von 300€ eingelöst werden.</p>
+                </div>   
+            </div>
+            <div class="alarm" id ="alarm">
+              <p>Leider sind Ihre Angaben nicht komplett</p>
+            </div>
+            <div class="footer">  
+            </div>    
+          </form>
+        </div>
+
+
+
+      </div>
+    
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
