@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Newsletter/Start</title>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,600">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/opensans/open-sans-v26-latin-ext_latin-300.woff2" type="font/ttf" crossorigin="">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/opensans/open-sans-v26-latin-ext_latin-regular.woff2" type="font/ttf" crossorigin="">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/opensans/open-sans-v26-latin-ext_latin-600.woff2" type="font/ttf" crossorigin="">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/opensans/open-sans-v26-latin-ext_latin-700.woff2" type="font/ttf" crossorigin="">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/andrade_pro_regular-webfont.woff2" type="font/woff" crossorigin="">
+  <link rel="preload" as="font" href="https://www.mybudapester.com/skin/frontend/budapester/default/fonts/icons.woff" type="font/woff" crossorigin="">
+  <link rel="stylesheet" href="styleMainPage.css" /> 
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="styleMainPage.css" />
 </head>
 <body>
   <div class="button-container">
@@ -14,7 +21,6 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="content"> 
-      
           <div class="header-title">
             <h4>
               Jetzt zum Newsletter anmelden und
@@ -34,7 +40,7 @@
                 <small>Error vorname</small>
               </div>
               <div class ="form-control">
-                <input class ="form-control-input" id="nachname" type="nachname" name ="nachname" autocomplete ="off"  placeholder="Nachname" />
+                <input class ="form-control-input" id="nachname" type="text" name ="nachname" autocomplete ="off"  placeholder="Nachname" />
                 <div id="nachname_error"></div>
                 <small>Error nachname</small>
               </div>
@@ -49,10 +55,10 @@
                   <input type="radio" name="gender" id ="radio-gender2">
                   <label for="age1">FÜR HERREN</label><br>
                 </div>   
-                <button type ="submit" class ="button"> ABSENDEN</button>
+                <button id="absenden" type ="submit" class ="button"> ABSENDEN</button>
               </div>
             </div>
-            <div class="ordered-lists-group">
+            <div class="ordered-lists-group2">
               <ul class ="ordered-lists">
                 <li>DIE NEUESTEN SCHUHKOLLEKTIONEN</li>
                 <li>PERSÖNLICHE STYLING & LIFESTYLE-TIPPS</li>
@@ -60,12 +66,10 @@
                 <li> GEHEIME RABATT-AKTIONEN </li>
               </ul>
             </div>
-            <div class ="text">
+            <div class ="footer-text">
               <input class="radio" id="radio" type="radio">
-                <div class= "text-inhalt">
-                  *Ich stimme zu, dass die MyBudapester.com GmbH meine persönlichen Daten gemäß den Datenschutzbestimmungen zum Zwecke der Werbung<p>verwenden, sowie Erinnerungen über nicht bestellte Waren in meinem Warenkorb per E-Mail an mich senden darf. Diese E-Mails können an von mir </p> erworbene oder angesehene Artikel angepasst sein. Ich kann diese Einwilligung jederzeit wie hier beschrieben widerrufen.
-                  <p>* Der Gutschein kann ab einem Mindestbestellwert von 300€ eingelöst werden.</p>
-                </div>   
+                <label for="radio"><em>*</em><p>Ich stimme zu, dass die MyBudapester.com GmbH meine persönlichen Daten gemäß den <a href="https://www.mybudapester.com/datenschutz" target="_blank">Datenschutzbestimmungen</a> zum Zwecke der Werbung verwenden, sowie Erinnerungen über nicht bestellte Waren in meinem Warenkorb per E-Mail an mich senden darf. Diese E-Mails können an von mir erworbene oder angesehene Artikel angepasst sein. Ich kann diese Einwilligung jederzeit wie <a href="#unsubscribeModal" data-toggle="modal" data-target="#unsubscribeModal">hier</a> beschrieben widerrufen.</p>
+                  <p>*&nbsp;Der Gutschein kann ab einem Mindestbestellwert von 300€ eingelöst werden.</p></label>
             </div>
             <div class="alarm" id ="alarm">
               <p>Leider sind Ihre Angaben nicht komplett</p>
@@ -74,11 +78,7 @@
             </div>    
           </form>
         </div>
-
-
-
       </div>
-    
     </div>
   </div>
   <script src="main.js"></script>
